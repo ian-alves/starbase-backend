@@ -11,7 +11,7 @@ module.exports = {
     async store(req, res) {
         const { planetName } = req.body;
 
-        const planetExists = await Planet.findOne({ planetName: planetName });
+        const planetExists = await Planet.findOne({ name: planetName });
 
         if (planetExists) {
             return res.json(planetExists);
