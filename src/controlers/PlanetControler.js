@@ -9,7 +9,7 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { planetName } = req.body;
+        const { planetName, authorId } = req.body;
 
         const planetExists = await Planet.findOne({ name: planetName });
 
@@ -18,6 +18,7 @@ module.exports = {
         }
 
         const planet = await Planet.create({
+            authorId: authorId,
             name: planetName
         })
 

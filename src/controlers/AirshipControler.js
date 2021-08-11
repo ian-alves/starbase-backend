@@ -9,7 +9,7 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { airshipName, airshipCapacity } = req.body;
+        const { airshipName, airshipCapacity, authorId } = req.body;
 
         const airshipExists = await Airship.findOne({ name: airshipName });
 
@@ -18,6 +18,7 @@ module.exports = {
         }
 
         const airship = await Airship.create({
+            authorId: authorId,
             name: airshipName,
             capacity: airshipCapacity
         })
