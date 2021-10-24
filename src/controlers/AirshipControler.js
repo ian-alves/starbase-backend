@@ -1,4 +1,3 @@
-const axios = require('axios');
 const Airship = require('../models/Airship');
 
 module.exports = {

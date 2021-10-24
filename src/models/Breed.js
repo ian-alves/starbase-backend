@@ -8,15 +8,10 @@ const DevSchema = new Schema({
     name: {
         type: String,
         required: true
-    },
-    predominantBreeds: [{
-        type: Schema.Types.ObjectId,
-        // fk
-        ref: 'Breed'
-    }]
+    }
 }, {
     timestamps: true
     // createdAt, updateAt
 });
 
-module.exports = model('Planet', DevSchema);
+module.exports = model('Breed', DevSchema);
