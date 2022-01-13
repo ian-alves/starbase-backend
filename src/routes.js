@@ -2,15 +2,15 @@ const express = require('express');
 
 const routes = express.Router();
 
-const PlanetControler = require('./controlers/PlanetControler');
-const AirshipControler = require('./controlers/AirshipControler');
-const BreedControler = require('./controlers/BreedControler');
+const PlanetController = require('./controllers/PlanetController');
+const AirshipController = require('./controllers/AirshipController');
+const BreedController = require('./controllers/BreedController');
 
-routes.get('/planets', PlanetControler.index);
-routes.post('/planets', PlanetControler.store);
-routes.get('/airships', AirshipControler.index);
-routes.post('/airships', AirshipControler.store);
-routes.get('/breeds', BreedControler.index);
-routes.post('/breeds', BreedControler.store);
+routes.get('/planets', PlanetController.index);
+routes.post('/planets', PlanetController.store);
+routes.get('/airships', AirshipController.index);
+routes.post('/airships', AirshipController.store);
+routes.get('/breeds', BreedController.index);
+routes.post('/breeds', BreedController.store);
 
 module.exports = routes;
